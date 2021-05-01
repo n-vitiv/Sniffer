@@ -23,7 +23,7 @@ void bindSocket(int sock, struct hostent* host)
     sa.sin_family = AF_INET;
     sa.sin_addr.s_addr = ((struct in_addr*)host->h_addr_list[0])->s_addr;
 
-    if(bind(sock, (struct sockaddr_in*)&sa, sizeof(struct sockaddr_in)) != 0)
+    if(bind(sock, (struct sockaddr*)&sa, sizeof(struct sockaddr_in)) != 0)
     {
         perror("Error in bind socket.\n");
         exit(-1);
