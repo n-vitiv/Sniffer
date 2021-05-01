@@ -1,4 +1,5 @@
-#include <stdio.h>
+#ifndef _IPHEAD_H_
+#define _IPHEAD_H_
 
 typedef struct _IPHeader
 {
@@ -15,3 +16,5 @@ typedef struct _IPHeader
     unsigned short *params;
     unsigned char  *data;			
 } IPHeader;
+
+#endif
