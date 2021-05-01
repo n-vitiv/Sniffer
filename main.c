@@ -9,5 +9,9 @@ unsigned short hibyte;
 int main()
 {
     int sock = createSocket();
+
+    struct hostent* host;
+    bindSocket(sock, host);
+
     return 0;
 }

@@ -16,4 +16,6 @@
 
 int createSocket();
 
+void bindSocket(int sock, struct hostent* host);
+
 #endif
